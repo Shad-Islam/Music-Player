@@ -18,3 +18,16 @@ function playPause() {
     playPauseBtn.classList.add("fa-pause");
   }
 }
+
+if (song.play()) {
+  setInterval(() => {
+    progress.value = song.currentTime;
+  }, 500);
+}
+
+progress.onchange = function () {
+  song.play();
+  song.currentTime = progress.value;
+  playPauseBtn.classList.remove("fa-play");
+  playPauseBtn.classList.add("fa-pause");
+};
