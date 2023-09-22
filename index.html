@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
+    <!-- font awsome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom css link-->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="music-player"></div>
+      <div class="music-player">
+        <nav>
+          <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="circle"><i class="fa-solid fa-bars"></i></div>
+        </nav>
+        <img
+          alt="song-image"
+          class="song-image"
+          src="./images/song-image.jpg"
+        />
+        <h1>Tor Premete Ondho Holam</h1>
+        <p>James</p>
+        <audio controls>
+          <source src="./media/In Da Club.mp3" type="audio/mpeg" />
+        </audio>
+        <input type="range" value="0" id="progress" />
+        <div class="control">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div><i class="fa-solid fa-play"></i></div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
